@@ -21,7 +21,7 @@ def fetch_data(api_url):
 
 data = fetch_data(URL)
 if data is not None:
-    with open(SAVE_FILE, 'a', newline='', encoding='utf-8') as csvfile:
+    with open(SAVE_FILE, 'a', newline='', encoding='utf-8', errors='replace') as csvfile:
         csv_writer = csv.writer(csvfile, lineterminator='\n')
 
         if os.path.getsize(SAVE_FILE) == 0:  # Če je datoteka prazna, dodaj header

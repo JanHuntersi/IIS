@@ -85,7 +85,7 @@ gru_mae_test, gru_mse_test, gru_evs_test = calculate_metrics(y_test, y_pred)
 print("\nGRU Model Metrics:")
 print(f"MAE: {gru_mae_test}, MSE: {gru_mse_test}, EVS: {gru_evs_test}")
 
-with open('../reports/metrics.txt', 'w', encoding='utf-8') as f:
+with open('../reports/metrics.txt', 'w', encoding='utf-8', errors='replace') as f:
         f.write(f'Mean average error: {gru_mae_test}\nMean square error: {gru_mse_test}\nExplained variance score: {gru_evs_test}\n')
 
 
@@ -104,6 +104,6 @@ gru_mae, gru_mse, gru_evs = calculate_metrics(y_test_true, y_test_pred_gru)
 print("\nGRU Model Metrics:")
 print(f"MAE: {gru_mae}, MSE: {gru_mse}, EVS: {gru_evs}")
 
-with open('../reports/train_metrics.txt', 'w', encoding='utf-8') as f:
+with open('../reports/train_metrics.txt', 'w', encoding='utf-8', errors='replace') as f:
         f.write(f'Mean average error: {gru_mae}\nMean square error: {gru_mse}\nExplained variance score: {gru_evs}\n')
 
