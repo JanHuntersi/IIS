@@ -20,7 +20,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        python3 -m pip install --upgrade pip
+        python3 -m pip install --verbose vaje==0.1.0
         pip3 install poetry
         poetry install
 
